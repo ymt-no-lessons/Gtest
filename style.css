@@ -59,6 +59,51 @@
       font-size: 1em;
       display: none;
     }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+      margin-top: 2em;
+    }
+    .menu button {
+      padding: 1em 2em;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 8px;
+      background-color: #64b5f6;
+      color: white;
+      cursor: pointer;
+    }
+    .menu button:hover {
+      background-color: #42a5f5;
+    }
+
+/*用語集*/
+    .term-table {
+      width: 100%;
+      max-width: 800px;
+      border-collapse: collapse;
+      margin: auto;
+      background: white;
+    }
+    th, td {
+      padding: 0.8em;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background: #e0f2f1;
+    }
+    .category-heading {
+      margin-top: 2em;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #4caf50;
+      text-align: center;
+    }
+
     @media screen and (max-width: 600px) {
       .quiz-box {
         padding: 0.8em;

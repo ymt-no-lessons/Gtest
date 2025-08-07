@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-    <title>G検定用語集 - 柴楽：AIものしり屋</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G検定 用語集 - 柴楽</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+ 
 </head>
 <body>
-    <h1>作成中</h1>
+  <header>
+    <img src="shibaLogo256.png" alt="柴楽ロゴ" style="width:80px">
+    <h1>G検定 用語集</h1>
+    <p>カテゴリ別でAIの重要用語を整理🐕📘</p>
+    <nav><a href="index.html">🏠 トップページへ戻る</a></nav>
+  </header>
+
+  <main id="word-container">
+    <p>📖 読み込み中…</p>
+  </main>
+
+  <script>
+    Papa.parse("words.csv", {
+      download: true,
+      header: true,
+      complete: function(results) {
+        const data = results.data.filter(row => row.term && row.definition);
+        const grouped = {};
+
+        data.forEach(row => {
+          if (!grouped[row.category]) grouped[row.category] = [];
+          grouped[row.category].push(row);
+        });
+
+        const container = document.getElementById("word-container");
+        container.innerHTML = "";
+
+        for (const category in grouped) {
+          const heading = document.createElement("div");
+          heading.className = "category-heading";
+          heading.textContent = `📂 ${category}`;
+          container.appendChild(heading);
+
+          const table = document.createElement("table");
+          table.className = "term-table";
+          table.innerHTML = "<tr><th>用語</th><th>解説</th></tr>";
+
+          grouped[category].forEach(row => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `<td>${row.term}</td><td>${row.definition}</td>`;
+            table.appendChild(tr);
+          });
+
+          container.appendChild(table);
+        }
+      }
+    });
+  </script>
 </body>
+</html>

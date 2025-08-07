@@ -1,0 +1,8 @@
+📂 /your-repo/
+├── index.html        ← トップページ
+├── quiz.html         ← 元の index.html（リネーム）
+├── words.html        ← 用語集ページ
+├── main.js           ← クイズJS（CSV対応済）
+├── style.css         ← 共通スタイル
+├── quiz.csv          ← 問題CSV
+├── shibaLogo256.png  ← ロゴ画像
