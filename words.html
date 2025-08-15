@@ -26,12 +26,12 @@
       download: true,
       header: true,
       complete: function(results) {
-        const data = results.data.filter(row => row.term && row.definition);
+      const data = results.data.filter(row => row["用語"] && row["説明"]);
         const grouped = {};
 
         data.forEach(row => {
-          if (!grouped[row.category]) grouped[row.category] = [];
-          grouped[row.category].push(row);
+          if (!grouped[row["カテゴリ"]]) grouped[row["カテゴリ"]] = [];
+          grouped[row["カテゴリ"]].push(row);
         });
 
         const container = document.getElementById("word-container");
@@ -49,7 +49,7 @@
 
           grouped[category].forEach(row => {
             const tr = document.createElement("tr");
-            tr.innerHTML = `<td>${row.term}</td><td>${row.definition}</td>`;
+            tr.innerHTML = `<td>${row["用語"]}</td><td>${row["説明"]}</td>`;
             table.appendChild(tr);
           });
 
