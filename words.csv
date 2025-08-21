@@ -39,7 +39,7 @@
 基本概念,汎化性能,モデルが未知データにどれだけ適用できるかの能力,https://gkentei.techblog.jp/archives/cat_285848.html,
 基本概念,過学習,モデルが訓練データに過度に適合し汎化性能が低下する現象,https://gkentei.techblog.jp/archives/cat_285848.html,
 基本概念,バイアス,データやモデルに含まれる系統的な偏り,https://gkentei.techblog.jp/archives/cat_285848.html,
-基本概念,AIが人間の知能を超えてAI自身がAIを進化させ続けて人間社会に莫大な影響を与える未来の時点のこと。技術的特異点ともいう。発明家のレイ・カーツワイルが2045年頃に到来すると言ったことで注目された。,AIが人間の知能を超えてAI自身がAIを進化させ続けて人間社会に莫大な影響を与える未来の時点のこと,,
+基本概念,シンギュラリティ,AIが人間の知能を超えてAI自身がAIを進化させ続けて人間社会に莫大な影響を与える未来の時点のこと。技術的特異点ともいう。発明家のレイ・カーツワイルが2045年頃に到来すると言ったことで注目された。,https://gkentei.techblog.jp/archives/cat_285848.html,
 モデル・アルゴリズム,CNN（畳み込みニューラルネットワーク）（Convolutional Neural Network；CNN）,画像処理に特化したニューラルネット構造,https://gkentei.techblog.jp/archives/cat_285848.html,
 モデル・アルゴリズム,RNN（再帰型ニューラルネットワーク）,時系列データを扱う構造,https://gkentei.techblog.jp/archives/cat_285848.html,
 モデル・アルゴリズム,LSTM,長期依存関係を扱うRNN構造,https://gkentei.techblog.jp/archives/cat_285848.html,
